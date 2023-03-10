@@ -16,6 +16,9 @@ select cantidad,  cantidad*0.1 as descuento ,cantidad - (cantidad*0.1) as total 
 #Trae el 10% de descuento en todos los registros de la columna "cantidad" que valgan 3
 select cantidad,  cantidad*0.1,cantidad -(cantidad*0.1) from personas where cantidad =3;
 
+#Si quisiera modificar y que permanezca el descuento, a los valores que sean igual a 66
+update personas set cantidad = cantidad-(cantidad*0.1) where cantidad = 66;
+
 #Traer la cantidad minima
 SELECT MIN(cantidad)
 FROM personas;
